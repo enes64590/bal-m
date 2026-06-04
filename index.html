@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="hearts"></div>
+
+<!-- GİRİŞ -->
+<section id="login">
+  <div class="card">
+    <h1>❤️</h1>
+    
+    <p>Enes’in kalbini çalan kişinin adı nedir?</p>
+
+    <input type="password" id="pass1" placeholder="Cevabını yaz">
+
+    <button onclick="login()">Giriş Yap</button>
+  </div>
+</section>
+
+<!-- ANA SAYFA -->
+<section id="main">
+
+  <audio id="music" loop>
+    <source src="music.mp3">
+  </audio>
+
+  <div class="note" onclick="openNote()">
+    💌 Notunu Görmek İçin Tıkla
+  </div>
+
+  <p class="scroll">↓ Aşağı Kaydır ↓</p>
+
+  <div class="secret">
+    <h2>🔐 Şifreyi Gir</h2>
+    <input type="password" id="pass2">
+    <button onclick="check()">Devam Et</button>
+    <p class="hint">İpucu: TikTok hesabıma bak 👀</p>
+  </div>
+
+</section>
+
+<!-- NOT MODAL -->
+<div id="noteModal" onclick="closeNote()">
+  <div class="noteBox" onclick="event.stopPropagation()">
+    <h2>💌 Not</h2>
+    <p id="noteText"></p>
+    <button onclick="closeNote()">Kapat</button>
+  </div>
+</div>
+
+<!-- TEKLİF -->
+<div id="proposal">
+
+  <div class="text" id="text"></div>
+
+  <h1 id="title">❤️ Benimle Sevgili Olur Musun?</h1>
+
+  <div class="buttons">
+    <button onclick="yes()">Evet ❤️</button>
+    <button onclick="yes()">Kesinlikle Evet ❤️</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
